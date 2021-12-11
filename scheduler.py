@@ -23,7 +23,7 @@ def triggerTestPlanForNode(plan):
     resp.raise_for_status()
 
 plans_list=[]
-print("Callback URL for scheduler request: "+print(sys.argv[1]))
+print("Callback URL for scheduler request: "+sys.argv[1])
 with open("buildplan.yaml", "r") as stream:
     try:
         plan = yaml.safe_load(stream)
