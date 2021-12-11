@@ -7,7 +7,7 @@ print(sys.argv[1])
 
 
 with open('results.csv',"w+") as f:
-    f.write("timestamp,min,max,average")
+    f.write("timestamp,min,max,average\n")
     i=0
     while(i<50):
         line = str(datetime.datetime.now())+","+str(random.uniform(80.00,85.00))+","+str(random.uniform(85.00,90.00))+","+str(random.uniform(82,87))+"\n"
