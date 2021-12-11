@@ -10,8 +10,8 @@ pipeline {
                     properties([
                         parameters([
                             choice(
-                                choices: ['Anritsu', 'Poland'], 
-                                name: 'Select Station'
+                                choices: ['Node1', 'Node2'], 
+                                name: 'Select Test Node'
                             ),
                             choice(
                                 choices: ['New Plan', 'Last Plan'], 
@@ -19,16 +19,16 @@ pipeline {
                             ),
                             string(
                                 defaultValue: 'scriptcrunch', 
-                                name: 'ASP IP Address', 
+                                name: 'Network Switch IP Address', 
                                 trim: true
                             ),
                             choice(
                                 choices: ['harsh', 'prateek'], 
-                                name: 'Select ASC user'
+                                name: 'Select switch username'
                             ),
                             choice(
-                                choices: ['G1', 'G2'], 
-                                name: 'Select ASC group'
+                                choices: ['HG1', 'HG2'], 
+                                name: 'Select switch hardware group'
                             ),
                             choice(
                                 choices: ['G1', 'G2'], 
@@ -36,17 +36,17 @@ pipeline {
                             ),
                             string(
                                 defaultValue: '0', 
-                                name: 'Campaign Duration (Minutes)', 
+                                name: 'Test Timeout (Minutes)', 
                                 trim: true
                             ),
                             booleanParam(
                                 defaultValue: true, 
                                 description: '', 
-                                name: 'BOOLEAN'
+                            name: 'Hard Reboot Between Tests'
                             ),
                              choice(
-                                choices: ['Today ToT', 'Bin'], 
-                                name: 'Build Selection'
+                                choices: ['NLA_5_1_0_REV01', 'NLA_6_1_0_REV01'], 
+                                name: 'E500 Build Label'
                             ),
                             text(
                                 defaultValue: '''
@@ -55,11 +55,6 @@ pipeline {
                                 ''', 
                                  name: 'Additonal Stats Command'
                             ),
-                            string(
-                                defaultValue: 'scriptcrunch', 
-                                name: 'STRING-PARAMETER', 
-                                trim: true
-                            )
                         ])
                     ])
                 }
