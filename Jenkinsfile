@@ -149,19 +149,19 @@ pipeline {
         )
       }
     }
-    stage('reports') {
-    steps {
-    script {
-            allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'target/allure-results']]
-            ])
-    }
-    }
-}
+//     stage('reports') {
+//     steps {
+//     script {
+//             allure([
+//                     includeProperties: false,
+//                     jdk: '',
+//                     properties: [],
+//                     reportBuildPolicy: 'ALWAYS',
+//                     results: [[path: 'target/allure-results']]
+//             ])
+//     }
+//     }
+// }
 stage("Plot Results"){
       steps {
     plot csvFileName: 'plot-5c43d682-6222-4316-bda9-ba661f8780bd.csv', csvSeries: [[displayTableFlag: true, exclusionValues: '', file: 'results.csv', inclusionFlag: 'OFF', url: '']], group: 'TMA', numBuilds: '3', style: 'line', title: 'TMA Testplan Results', useDescr: true, yaxis: 'Y Axis Data'
