@@ -49,10 +49,8 @@ pipeline {
                 name: 'E500 Build Label'
               ),
               text(
-                defaultValue: ''
-                '
-                this is a multi - line string parameter example ''
-                ', 
+                defaultValue: '''
+                this is a multi - line string parameter example ''', 
                 name: 'Additonal Stats Command'
               ),
             ])
