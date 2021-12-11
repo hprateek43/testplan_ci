@@ -1,0 +1,22 @@
+pipeline {
+  agent {
+    label 'windows'
+  }
+
+  stages {
+    stage('build') {
+      steps {
+        script {
+          def selectedNode = "${params.node}"
+
+          node(selectedNode) {
+              withFileParameter('FILE') {
+                bat "type $FILE"
+                }
+          }
+        }
+      }
+    }
+
+  }
+}

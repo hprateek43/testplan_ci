@@ -1,18 +1,18 @@
 nodes:
 - node:
-  - name: node1
+  - name: win001
     ip: 192.168.0.2
-    - core_network_details:
+    core_network_details:
       - ip: 12.0.0.1
       - username: admin
       - password: password
       - network_code: N1C01 # python 1:1 mapping
-    - base_station_details:
+    base_station_details:
       - ip: 14.0.0.34
       - username: admin
       - password: password
       - network_code: BTS1X01 # python 1:1 mapping
-    - network_switch_details:
+    network_switch_details:
       - ip: 32.0.3.119
       - username: admin
       - password: password
@@ -31,95 +31,34 @@ nodes:
       - name: 10004_500UE_MAX_THROUGHPUT_UL.xml
       - duration: 60
 
-- name: node2
-    ip: 192.168.0.2
-    - core_network_details:
+- node:
+  - name: win002
+    ip: 192.168.0.22
+    core_network_details:
       - ip: 12.0.0.1
       - username: admin
       - password: password
       - network_code: N1C01 # python 1:1 mapping
-    - base_station_details:
+    base_station_details:
       - ip: 14.0.0.34
       - username: admin
       - password: password
       - network_code: BTS1X01 # python 1:1 mapping
-    - network_switch_details:
+    network_switch_details:
       - ip: 32.0.3.119
       - username: admin
       - password: password
       - network_code: NS1022 # python 1:1 mapping
     campaigns:
     - test:
-      - name: 10001_1UE_MAX_THROUGHPUT_DL.xml
+      - name: 20001_1UE_MAX_THROUGHPUT_DL.xml
       - duration: 60
     - test:
-      - name: 10002_1UE_MAX_THROUGHPUT_UL.xml
+      - name: 20002_1UE_MAX_THROUGHPUT_UL.xml
       - duration: 60
     - test:
-      - name: 10003_500UE_MAX_THROUGHPUT_DL.xml
+      - name: 20003_500UE_MAX_THROUGHPUT_DL.xml
       - duration: 60
     - test:
-      - name: 10004_500UE_MAX_THROUGHPUT_UL.xml
-      - duration: 60
-
-- name: node3
-    ip: 192.168.0.2
-    - core_network_details:
-      - ip: 12.0.0.1
-      - username: admin
-      - password: password
-      - network_code: N1C01 # python 1:1 mapping
-    - base_station_details:
-      - ip: 14.0.0.34
-      - username: admin
-      - password: password
-      - network_code: BTS1X01 # python 1:1 mapping
-    - network_switch_details:
-      - ip: 32.0.3.119
-      - username: admin
-      - password: password
-      - network_code: NS1022 # python 1:1 mapping
-    campaigns:
-    - test:
-      - name: 10001_1UE_MAX_THROUGHPUT_DL.xml
-      - duration: 60
-    - test:
-      - name: 10002_1UE_MAX_THROUGHPUT_UL.xml
-      - duration: 60
-    - test:
-      - name: 10003_500UE_MAX_THROUGHPUT_DL.xml
-      - duration: 60
-    - test:
-      - name: 10004_500UE_MAX_THROUGHPUT_UL.xml
-      - duration: 60
-
-- name: node4
-    ip: 192.168.0.2
-    - core_network_details:
-      - ip: 12.0.0.1
-      - username: admin
-      - password: password
-      - network_code: N1C01 # python 1:1 mapping
-    - base_station_details:
-      - ip: 14.0.0.34
-      - username: admin
-      - password: password
-      - network_code: BTS1X01 # python 1:1 mapping
-    - network_switch_details:
-      - ip: 32.0.3.119
-      - username: admin
-      - password: password
-      - network_code: NS1022 # python 1:1 mapping
-    campaigns:
-    - test:
-      - name: 10001_1UE_MAX_THROUGHPUT_DL.xml
-      - duration: 60
-    - test:
-      - name: 10002_1UE_MAX_THROUGHPUT_UL.xml
-      - duration: 60
-    - test:
-      - name: 10003_500UE_MAX_THROUGHPUT_DL.xml
-      - duration: 60
-    - test:
-      - name: 10004_500UE_MAX_THROUGHPUT_UL.xml
+      - name: 30004_500UE_MAX_THROUGHPUT_UL.xml
       - duration: 60
