@@ -20,10 +20,11 @@ def triggerTestPlanForNode(plan):
 
     resp = requests.post(url, auth=("admin", "11e0772e9d1cad5a2f19a12bf14b78b714"), data=data,
             headers={"content-type": content_type,"Jenkins-Crumb":"2616f44971436bbfb253edceed81d4136d632206dcb5389478499c3c620140f9"}, verify=False)
+    print("Triggered Job : "+resp.headers['Location'])
     resp.raise_for_status()
 
 plans_list=[]
-print("Callback URL for scheduler request: "+sys.argv[1])
+# print("Callback URL for scheduler request: "+sys.argv[1])
 with open("buildplan.yaml", "r") as stream:
     try:
         plan = yaml.safe_load(stream)
